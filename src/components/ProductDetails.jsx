@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import styles from '../assets/styles/ProductDetails.module.css'
