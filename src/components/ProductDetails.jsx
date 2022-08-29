@@ -1,12 +1,12 @@
 import React, {useContext} from 'react';
 import { Link } from 'react-router-dom';
-import { ProductsContext } from '../context/ProductContextProvider';
+import { useSelector } from 'react-redux';
 import styles from '../assets/styles/ProductDetails.module.css'
 
 const ProductDetails = (props) => {
 
     const id = props.match.params.id;
-    const data = useContext(ProductsContext);
+    const data = useSelector(state => state.productsState.products)
     const product = data[id - 1];
     const {image, title, description, price, category} = product;
 
