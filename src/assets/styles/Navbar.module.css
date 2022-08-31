@@ -1,9 +1,9 @@
 .mainContainer {
   background-color: #fff;
-  margin: 0 0 100px;
+  width: 100vw;
   position: fixed;
   top: 0;
-  width: 100%;
+  left: 0;
   box-shadow: 0px 5px 24px rgba(149, 157, 165, 0.4);
 }
 
@@ -15,17 +15,15 @@
   padding: 15px 180px;
 }
 
-.productLink {
+.itemsContainer a {
+  padding: 0 20px;
   text-decoration: none;
   color: #1a73e8;
   font-weight: bold;
-  border-bottom: 3px solid #1a73e8;
-  border-radius: 2px;
-  padding: 0 1px;
   transition: all 0.2s ease;
 }
 
-.productLink:hover {
+.itemsContainer a:hover {
   color: #0b499b;
   border-bottom-color: #0b499b;
 }
