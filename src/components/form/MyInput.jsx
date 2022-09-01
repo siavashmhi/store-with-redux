@@ -6,7 +6,12 @@ const MyInput = (props) => {
     return (
         <div>
             <lable>{lable}</lable>
-            <input type={type} name={name} value={value} onChange={changeClick} />
+            <input
+                type={type}
+                name={name}
+                value={value}
+                onChange={changeClick}
+             />
         </div>
     );
 };

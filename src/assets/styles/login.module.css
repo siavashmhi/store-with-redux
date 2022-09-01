@@ -1,18 +1,10 @@
-.mainContainer {
-    background-color: #fff;
+.container {
     border: 1px solid silver;
-    width: fit-content;
-    margin: 100px auto;
-    padding: 0 30px 30px 30px;
     border-radius: 10px;
-}
-
-.formContainer span {
-    text-align: left;
-    color: red;
-    display: block;
-    font-size: 0.9rem;
-    margin-top: 10px;
+    width: fit-content;
+    margin: 150px auto;
+    padding: 0 30px 30px 30px;
+    min-height: 300px;
 }
 
 .formField input {
@@ -24,6 +16,18 @@
     border-radius: 5px;
 }
 
+.formField {
+    margin-top: 20px;
+}
+
+.formField span {
+    text-align: left;
+    color: red;
+    display: block;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
 .formField input:focus {
     outline: none;
     border: 1px solid #1a73e8;
@@ -32,22 +36,11 @@
 .formField div {
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
     text-align: left;
+}
+
+.formField  lable {
     color: #303030;
-}
-
-.checkBox {
-    margin-top: 30px;
-}
-
-.checkBox lable {
-    margin-right: 10px;
-    color: #303030;
-}
-
-.checkBox span {
-    text-align: center;
 }
 
 .btnContainer {
@@ -55,31 +48,25 @@
 }
 
 .btnContainer a {
+    text-decoration: none;
+    color: #fff;
     display: block;
     cursor: pointer;
-    text-decoration: none;
-    background-color: blueviolet;
     padding: 7px 0;
     font-size: 1rem;
     background-color: #303030;
-    color: #fff;
     border-radius: 5px;
 }
 
 .btnContainer button {
-    margin-top: 15px;
-    cursor: pointer;
     width: 100%;
-    background-color: brown;
     border: none;
+    color: #fff;
+    background-color: blueviolet;
+    cursor: pointer;
     padding: 7px 0;
     font-size: 1rem;
+    margin-top: 15px;
     background-color: #1a73e8;
-    color: #fff;
     border-radius: 5px;
-}
-
-.btnContainer button:disabled {
-    cursor: not-allowed;
-    background-color: red;
 }

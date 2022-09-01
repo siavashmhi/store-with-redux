@@ -3,6 +3,9 @@ import validateData from '../../helper/validateForm';
 import MyInput from './MyInput';
 import styles from '../../assets/styles/signup.module.css'
 import { Link } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import notify from '../../helper/toast';
 
 const SignUp = () => {
 
@@ -14,7 +17,7 @@ const SignUp = () => {
         isAccepted: false
     })
 
-    const [errors, setErrors] = useState([])
+    const [errors, setErrors] = useState({})
 
     useEffect(() => {
         setErrors(validateData(data, 'signup'))
@@ -27,6 +30,11 @@ const SignUp = () => {
 
     const submitHandler = event => {
         event.preventDefault()
+        if(Object.keys(errors).length === 0) {
+            notify('you signed in successfuly', 'success')
+        } else {
+            notify('invalid input, please try again!')
+        }
     }
 
     return (
@@ -87,6 +95,17 @@ const SignUp = () => {
                     <button>Sign Up</button>
                 </div>
             </form>
+            <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+             />
         </div>
     );
 };
