@@ -20,7 +20,7 @@ const Product = ({productData}) => {
                 <Link to={`/products/${productData.id}`}>Details</Link>
                 <div className={styles.buttonContainer}> 
                     {quantityCount(state, productData.id) > 1 && <button className={styles.smallButton} onClick={() => dispatch(decrease(productData))}>-</button>}
-                    {quantityCount(state, productData.id) === 1 && <button className={styles.smallButton} onClick={() => dispatch(removeItem(productData))}><img src={trashIcon} alt="trash" style={{width: "20px"}} /></button>}
+                    {quantityCount(state, productData.id) === 1 && <button className={styles.smallButton} onClick={() => dispatch(removeItem(productData))}><img src={trashIcon} alt="trash"/></button>}
                     {quantityCount(state, productData.id) > 0 && <span className={styles.counter}>{quantityCount(state, productData.id)}</span>}
                     {
                         isInCart(state, productData.id) ?

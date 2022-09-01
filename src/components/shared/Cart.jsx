@@ -25,7 +25,7 @@ const Cart = ({data}) => {
                     quantity > 1 ?
                     <button onClick={() => dispatch(decrease(data))}>-</button> :
                     <button onClick={() => dispatch(removeItem(data))}>
-                        <img src={trashIcon} alt="trash" style={{width: "20px"}} /></button>
+                        <img src={trashIcon} alt="trash"/></button>
                 }
                 <button onClick={() => dispatch(increase(data))}>+</button>
             </div>
