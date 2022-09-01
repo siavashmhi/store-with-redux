@@ -1,10 +1,10 @@
 .mainContainer {
     background-color: #fff;
-    border: 1px solid silver;
     width: fit-content;
     margin: 100px auto;
-    padding: 0 30px 30px 30px;
+    padding: 20px 30px 30px 30px;
     border-radius: 10px;
+    box-shadow: 0px 1px 13px 4px #929297
 }
 
 .formContainer span {
